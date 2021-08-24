@@ -30,6 +30,7 @@
       }
 
       shuffle(team_names);
+      team_names = team_names.slice(0, 5);
       var numProjects = document.getElementById('num_projects');
       numProjects.innerHTML = `${team_names.length}`;
 
