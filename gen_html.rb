@@ -36,7 +36,7 @@ f = %Q{
         numProjects.innerHTML = `${team_names.length}`;
 
         var h2 = document.createElement('h2');
-        h2.innerHTML = `<a href="https://github.com/langjam/jam0001/issues?q=${tn}">${tn}</a>`;
+        h2.innerHTML = `<a href="https://github.com/langjam/jam0001/tree/main/${tn}">${tn}</a> - <a href="https://github.com/langjam/jam0001/issues?q=team+${tn}">vote</a>`;
         document.body.appendChild(h2);
 
         var iframe = document.createElement('iframe');
