@@ -1,4 +1,4 @@
-IGNORE = ["TEMPLATE", "htmls"]
+IGNORE = ["TEMPLATE", "htmls", "docs"]
 team_names = Dir.glob('*').select {|f| !IGNORE.include?(f) and File.directory? f}
 
 `mkdir -p docs/htmls`

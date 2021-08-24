@@ -5,7 +5,7 @@
     </body>
 
     <script>
-      var team_names = JSON.parse(`["dyniec","ilikepizza","ඞ","hello-jam","rundown","shadlock0133","ATeam","Purr","cdc","literally_illiterate","tjjfvi","DJs","lilith","some-team","coqui","[[redacted]]","beepbeepbeep","🌌","test","KerLang","Floeckchengrafik","cronokirby","samtara","Nettlesting","BlueBlazin","Boole","confined","almibe","fresskoma","pancake","vic","qteatime","〈( ^.^)ノ","jam_solo","BenJilks","htmls","basile-henry","mrArkwrong","polyphem","λ","LexicalCrimes","fnord","Rush","HectorHW","dank","DRUN","onyx","beatsaber","ryangjchandler","nebelhut","unsound-judgement","bx","guitarvydas","lezgomatt","made-up","SOLDIER","ForLoveOfCats","asrp","eignnx","AnActualEmerald","alexdikelsky","hope","yet-another-jt","LaFuN","Renati","andyh","miccah","Electrolysis","nsfisis","clammer","Echoes","superforth","BlueSlytherin","steveklabnik","autocomf","DLJ1","MarkSideways","elucent","LoHacker","TeamHTP","TeamDailyDose","The-Literals","unseemly-behavior","tontuna","c_chads","jthorn-pantonshire","Polyglutton","lukehoban","dfreeman","Bee","eith"]`);
+      var team_names = JSON.parse(`["dyniec","ilikepizza","ඞ","hello-jam","rundown","shadlock0133","ATeam","Purr","cdc","literally_illiterate","tjjfvi","DJs","lilith","some-team","coqui","[[redacted]]","beepbeepbeep","🌌","test","KerLang","Floeckchengrafik","cronokirby","samtara","Nettlesting","BlueBlazin","Boole","confined","almibe","fresskoma","pancake","vic","qteatime","〈( ^.^)ノ","jam_solo","BenJilks","basile-henry","mrArkwrong","polyphem","λ","LexicalCrimes","fnord","Rush","HectorHW","dank","DRUN","onyx","beatsaber","ryangjchandler","nebelhut","unsound-judgement","bx","guitarvydas","lezgomatt","made-up","SOLDIER","ForLoveOfCats","asrp","eignnx","AnActualEmerald","alexdikelsky","hope","yet-another-jt","LaFuN","Renati","andyh","miccah","Electrolysis","nsfisis","clammer","Echoes","superforth","BlueSlytherin","steveklabnik","autocomf","DLJ1","MarkSideways","elucent","LoHacker","TeamHTP","TeamDailyDose","The-Literals","unseemly-behavior","tontuna","c_chads","jthorn-pantonshire","Polyglutton","lukehoban","dfreeman","Bee","eith"]`);
 
       function shuffle(array) {
         var currentIndex = array.length,  randomIndex;
@@ -32,7 +32,7 @@
         numProjects.innerHTML = `${team_names.length}`;
 
         var h2 = document.createElement('h2');
-        h2.innerHTML = tn;
+        h2.innerHTML = `<a href="https://github.com/langjam/jam0001/issues?q=${tn}">${tn}</a>`;
         document.body.appendChild(h2);
 
         var iframe = document.createElement('iframe');

@@ -1,13 +1,6 @@
 require "json"
-
-team_names = Dir.glob('*').select {|f| f != "TEMPLATE" and File.directory? f}
-
-#team_names.each do |team_name|
-#  iframes << %Q{
-#    <iframe style="margin: auto;" width="98%" height="800px" src="htmls/#{team_name}.html">
-#    </iframe>
-#  }
-#end
+IGNORE = ["TEMPLATE", "htmls", "docs"]
+team_names = Dir.glob('*').select {|f| !IGNORE.include?(f) and File.directory? f}
 
 f = %Q{
   <html>
@@ -43,7 +36,7 @@ f = %Q{
         numProjects.innerHTML = `${team_names.length}`;
 
         var h2 = document.createElement('h2');
-        h2.innerHTML = tn;
+        h2.innerHTML = `<a href="https://github.com/langjam/jam0001/issues?q=${tn}">${tn}</a>`;
         document.body.appendChild(h2);
 
         var iframe = document.createElement('iframe');
